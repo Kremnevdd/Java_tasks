@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration status="WARN">
+    <appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+        </Console>
+        <File name="MyThirdFile" fileName="logs/exceptions.log">
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %-1level %logger{36} - %msg%n"/>
+            <ThresholdFilter level="ERROR" onMatch="ACCEPT" onMismatch="DENY"/>
+
+        </File>
+        <File name="MyFile" fileName="logs/existing.log">
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %-1level %logger{36} - %msg%n"/>
+            <ThresholdFilter level="INFO" onMatch="DENY" onMismatch="ACCEPT"/>
+        </File>
+        <File name="MySecondFile" fileName="logs/non_existent.log">
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %-1level %logger{36} - %msg%n"/>
+            <ThresholdFilter level="ERROR" onMatch="DENY" onMismatch="ACCEPT"/>
+
+        </File>
+
+    </appenders>
+
+    <loggers>
+        <root level="TRACE">
+
+            <appender-ref ref="MyFile" level="debug"/>
+            <appender-ref ref="MySecondFile" level="info"/>
+            <appender-ref ref="MyThirdFile" level="trace"/>
+        </root>
+
+    </loggers>
+</configuration>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="8.29">
+<file name="C:\Java_Learning\java_basics\FilesAndNetwork\homework_3\src\main\java\Main.java">
+<error line="1" column="8" severity="warning" message="Неиспользуемый импорт класса - java.io.IOException. Для устранение удалите лишние импорты воспользовавшись сочетаниям клавиш CTRL+ALT+O / Cmd+Option+O" source="com.puppycrawl.tools.checkstyle.checks.imports.UnusedImportsCheck"/>
+</file>
+<file name="C:\Java_Learning\java_basics\FilesAndNetwork\homework_3\src\main\java\Movements.java">
+<error line="10" column="8" severity="warning" message="Неиспользуемый импорт класса - java.util.stream.Collectors. Для устранение удалите лишние импорты воспользовавшись сочетаниям клавиш CTRL+ALT+O / Cmd+Option+O" source="com.puppycrawl.tools.checkstyle.checks.imports.UnusedImportsCheck"/>
+</file>
+<file name="C:\Java_Learning\java_basics\FilesAndNetwork\homework_3\src\main\java\Operation.java">
+</file>
+</checkstyle>
